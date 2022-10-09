@@ -8,4 +8,14 @@
         android:icon="@drawable/account"
         app:showAsAction="always"
         />
+
+    <item
+        android:id="@+id/keluar"
+        android:title="delete"
+        android:icon="@drawable/logout"
+        app:showAsAction="always"
+        />
+
+
+
 </menu>

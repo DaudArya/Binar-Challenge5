@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.binarChallenge.mymovies.*
 
 class MainActivity : AppCompatActivity() {
+    var sharedPreference: SharedPreference? = null
 
     private lateinit var popularMovies: RecyclerView
     private lateinit var popularMoviesAdapter: MoviesAdapter
@@ -185,6 +186,16 @@ override fun onCreateOptionsMenu(menu: Menu): Boolean {
             R.id.akun-> {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
+                true
+            }
+            R.id.keluar-> {
+                sharedPreference = SharedPreference(this)
+                sharedPreference!!.clearSharedPreference()
+                Toast.makeText(this,"User LogOut Successfully.",Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
                 true
             }
 
