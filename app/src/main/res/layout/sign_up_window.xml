@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9999"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#757575">
+
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textColor="#FFF"
+                android:textSize="25dp"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/edt_dia_email_id"
+                android:hint="Enter Email Id"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="#E7E7E7"/>
+
+            <EditText
+                android:id="@+id/edt_dia_password"
+                android:hint="Enter Password"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="#E7E7E7"/>
+
+            <Button
+                android:id="@+id/btn_dia_submit"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:background="@color/teal_200"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

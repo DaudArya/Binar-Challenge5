@@ -11,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.binarChallenge.mymovies.ui.MovieDetailsActivity"></activity>
-        <activity android:name="com.binarChallenge.mymovies.ui.MainActivity">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity android:name=".ui.MovieDetailsActivity" />
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
