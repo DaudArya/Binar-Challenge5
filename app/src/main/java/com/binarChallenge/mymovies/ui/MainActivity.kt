@@ -3,16 +3,38 @@ package com.binarChallenge.mymovies.ui
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+
+
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.binarChallenge.mymovies.*
+import com.binarChallenge.mymovies.databinding.ActivityMainBinding
+import com.binarChallenge.mymovies.databinding.FragmentEditProfileBinding
+import com.binarChallenge.mymovies.fragments.EditProfileFragment
+import com.binarChallenge.mymovies.model.DatabaseStore
+import com.binarChallenge.mymovies.utils.Constant
+import com.binarChallenge.mymovies.utils.SharedHelper
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
-    var sharedPreference: SharedPreference? = null
+
+    private var bind : ActivityMainBinding? = null
+    private val binding get() = bind!!
+    private var user: DatabaseStore? = null
+    private lateinit var shared: SharedHelper
+//    val navController = findNavController(R.id.fragmentContainerView)
 
     private lateinit var popularMovies: RecyclerView
     private lateinit var popularMoviesAdapter: MoviesAdapter
@@ -32,10 +54,14 @@ class MainActivity : AppCompatActivity() {
 
     private var upcomingMoviesPage = 1
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+//        viewName()
 
         popularMovies = findViewById(R.id.popular_movies)
         popularMoviesLayoutMgr = LinearLayoutManager(
@@ -182,17 +208,19 @@ override fun onCreateOptionsMenu(menu: Menu): Boolean {
 }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
         return when (item.itemId) {
             R.id.akun-> {
-                val intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, UserProfileActivity::class.java)
                 startActivity(intent)
+                finish()
                 true
             }
-            R.id.keluar-> {
-                sharedPreference = SharedPreference(this)
-                sharedPreference!!.clearSharedPreference()
-                Toast.makeText(this,"User LogOut Successfully.",Toast.LENGTH_SHORT).show()
 
+            R.id.keluar-> {
+                shared = SharedHelper(this)
+                shared.clear()
+                Toast.makeText(this,"User LogOut Successfully.",Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -202,4 +230,27 @@ override fun onCreateOptionsMenu(menu: Menu): Boolean {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
+
+//    fun viewName(){
+//
+//            binding.apply {
+//                lifecycleScope.launch(Dispatchers.IO){
+//                    val getName = user?.userDao()?.getUsername(shared.getString(Constant.USERNAME).toString())
+//                    show_name.text = "Hi, ${getName?.name}"
+//                }
+//            }
+//        }
+
+//    val navController: NavController = Navigation.findNavController(
+//        this,
+//        android.R.id.nav_host_fragment
+//    ) // replace "nav_host_fragment" with the id of your navHostFragment in activity layout
+//
+//    navController.navigate(R.id.EditNoteFragment)
+
+
 }
+
+
