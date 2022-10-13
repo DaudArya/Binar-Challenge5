@@ -7,19 +7,13 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.binarChallenge.mymovies.*
 import com.binarChallenge.mymovies.databinding.ActivityMainBinding
-import com.binarChallenge.mymovies.databinding.FragmentEditProfileBinding
-import com.binarChallenge.mymovies.fragments.EditProfileFragment
 import com.binarChallenge.mymovies.model.DatabaseStore
 import com.binarChallenge.mymovies.utils.Constant
 import com.binarChallenge.mymovies.utils.SharedHelper
@@ -61,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-//        viewName()
+
 
         popularMovies = findViewById(R.id.popular_movies)
         popularMoviesLayoutMgr = LinearLayoutManager(
@@ -96,6 +90,19 @@ class MainActivity : AppCompatActivity() {
         getPopularMovies()
         getTopRatedMovies()
         getUpcomingMovies()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        shared = SharedHelper(this)
+        user = DatabaseStore.getData(this)
+        if (shared.getBoolean(Constant.LOGIN, false)){
+                lifecycleScope.launch(Dispatchers.IO){
+                    val getName = user?.userDao()?.getUsername(shared.getString(Constant.USERNAME).toString())
+                    show_name.text = "Hola, ${getName?.name}"
+
+        }
+    }
     }
 
     private fun getPopularMovies() {
@@ -233,24 +240,14 @@ override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
 
 
-//    fun viewName(){
-//
-//            binding.apply {
-//                lifecycleScope.launch(Dispatchers.IO){
-//                    val getName = user?.userDao()?.getUsername(shared.getString(Constant.USERNAME).toString())
-//                    show_name.text = "Hi, ${getName?.name}"
-//                }
-//            }
-//        }
-
-//    val navController: NavController = Navigation.findNavController(
-//        this,
-//        android.R.id.nav_host_fragment
-//    ) // replace "nav_host_fragment" with the id of your navHostFragment in activity layout
-//
-//    navController.navigate(R.id.EditNoteFragment)
+fun showName(){
 
 
 }
+
+
+}
+
+
 
 

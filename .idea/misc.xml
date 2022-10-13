@@ -15,18 +15,21 @@
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/drawable-v24/edit_priority.xml" value="0.1615" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/drawable-v24/edit_txt_shape.xml" value="0.1615" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/drawable/account.xml" value="0.1615" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/drawable/circle.xml" value="0.195" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/drawable/ic_arrow_back.xml" value="0.2555" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/activity_login.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/activity_main.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/activity_movie_details.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/activity_user_profile.xml" value="0.2" />
-        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/fragment_edit_profile.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/fragment_edit_profile.xml" value="0.264" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/fragment_login.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/fragment_profile_user.xml" value="0.25" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/fragment_register.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/hh.xml" value="0.20512820512820512" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/item_movie.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/layout/sign_up_window.xml" value="0.2" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/menu/account_menu.xml" value="0.25" />
+        <entry key="..\:/Users/cacin/AndroidStudioProjects/CH5-BINAR/app/src/main/res/menu/add_photo.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/my-movies/app/src/main/res/layout/activity_main.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/my-movies/app/src/main/res/layout/activity_movie_details.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/cacin/AndroidStudioProjects/my-movies/app/src/main/res/layout/item_movie.xml" value="0.2210144927536232" />

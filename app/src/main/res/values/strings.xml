@@ -37,7 +37,8 @@
     <string name="register">Register</string>
     <string name="have_account">Have Account?</string>
     <string name="phone_number">Phone Number</string>
-    <string name="age">Age</string>
+    <string name="age">Birthday</string>
+    <string name="address">Address</string>
     <string name="name">Name</string>
     <string name="email">Email</string>
     <string name="edit_profile">Edit Profile</string>

@@ -24,25 +24,10 @@
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
-        android:id="@+id/profileUserFragment"
-        android:name="com.binarChallenge.mymovies.fragments.ProfileUserFragment"
-        android:label="fragment_profile_user"
-        tools:layout="@layout/fragment_profile_user" >
-        <action
-            android:id="@+id/action_profileUserFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_profileUserFragment_to_editProfileFragment"
-            app:destination="@id/editProfileFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/editProfileFragment"
         android:name="com.binarChallenge.mymovies.fragments.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" >
-        <action
-            android:id="@+id/action_editProfileFragment_to_profileUserFragment"
-            app:destination="@id/profileUserFragment" />
         <action
             android:id="@+id/action_editProfileFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
