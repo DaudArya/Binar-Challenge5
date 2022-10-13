@@ -1,0 +1,191 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9999"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/custom_input"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="84dp"
+                android:gravity="center"
+                android:text="Sign Up"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <EditText
+                android:id="@+id/email_id"
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="7dp"
+                android:elevation="2dp"
+                android:ems="10"
+                android:drawableLeft="@android:drawable/sym_contact_card"
+                android:hint="Enter Email Id"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <EditText
+                android:id="@+id/usernameig"
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="7dp"
+                android:elevation="2dp"
+                android:ems="10"
+                android:drawableLeft="@android:drawable/sym_contact_card"
+                android:hint="Enter Username"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_id" />
+
+            <EditText
+                android:id="@+id/fullname"
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_marginTop="36dp"
+                android:drawableLeft="@android:drawable/sym_contact_card"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="7dp"
+                android:elevation="2dp"
+                android:ems="10"
+                android:hint="Enter Full Name"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/usernameig" />
+
+            <EditText
+                android:id="@+id/birthday"
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="7dp"
+                android:elevation="2dp"
+                android:ems="10"
+                android:drawableLeft="@android:drawable/sym_contact_card"
+                android:hint="Enter date of birth"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fullname" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="7dp"
+                android:elevation="2dp"
+                android:ems="10"
+                android:drawableLeft="@android:drawable/sym_contact_card"
+                android:hint="Enter Address"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/birthday" />
+
+            <EditText
+                android:id="@+id/pws"
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="7dp"
+                android:elevation="2dp"
+                android:ems="10"
+                android:drawableLeft="@android:drawable/sym_contact_card"
+                android:hint="Enter Password"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="297dp"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:gravity="center"
+                android:text="Submit"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pws"
+                app:layout_constraintVertical_bias="0.833" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
