@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyMovies</string>
+    <string name="popular">Populer</string>
+    <string name="most_popular_movies">Paling Populer</string>
+    <string name="error_fetch_movies">Silahkan Periksa Koneksi Internet Anda</string>
+    <string name="top_rated">Rating Teratas</string>
+    <string name="highest_rated_movies">Rating Tertinggi</string>
+    <string name="upcoming">Akan Datang</string>
+    <string name="stay_updated">Tetap Update dengan Film Terbaru</string>
+    <string name="hello_blank_fragment">Halo Fragment Kosong</string>
+    <string name="editprofile">Ubah Profil</string>
+    <string name="hi_name">Selamat Datang, name</string>
+    <string name="now_playing">Sedang Diputar</string>
+    <string name="popular2">Pupuler</string>
+    <string name="up_coming">Akan datang</string>
+    <string name="top_rated2">Rating Tertinggi</string>
+    <string name="title">Judul</string>
+    <string name="_1_1">1.1</string>
+    <string name="detail_movies">Detail Film</string>
+    <string name="status">Status Terkini</string>
+    <string name="genre">Genre :</string>
+    <string name="rating">Penilaian :</string>
+    <string name="release_date">Tanggal Rilis :</string>
+    <string name="overview">Ulasan :</string>
+    <string name="profile_user">Profil Pengguna</string>
+    <string name="logout">Keluar</string>
+    <string name="next">Selanjutnya</string>
+    <string name="get_started">Ayo Mulai</string>
+    <string name="username">Nama Pengguna</string>
+    <string name="sign_in">Masuk</string>
+    <string name="password">Kata Sandi</string>
+    <string name="create_account">Buat Akun</string>
+    <string name="login">Login</string>
+    <string name="start">Yuk Mulai</string>
+    <string name="sign_up">Daftar</string>
+    <string name="register">Daftar</string>
+    <string name="have_account">Punya Akun ?</string>
+    <string name="phone_number">Nomor Telepon</string>
+    <string name="age">Tanggal Lahir</string>
+    <string name="address">Alamat</string>
+    <string name="name">Nama</string>
+    <string name="email">Email</string>
+    <string name="edit_profile">Ubah Profile</string>
+    <string name="save">Simpan</string>
+    <string name="delete_account">Hapus Akun</string>
+</resources>
