@@ -17,6 +17,7 @@ import com.binarChallenge.mymovies.databinding.ActivityMainBinding
 import com.binarChallenge.mymovies.model.DatabaseStore
 import com.binarChallenge.mymovies.utils.Constant
 import com.binarChallenge.mymovies.utils.SharedHelper
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -90,6 +91,7 @@ class MainActivity : AppCompatActivity() {
         getPopularMovies()
         getTopRatedMovies()
         getUpcomingMovies()
+
     }
 
     override fun onStart() {
@@ -227,6 +229,7 @@ override fun onCreateOptionsMenu(menu: Menu): Boolean {
             R.id.keluar-> {
                 shared = SharedHelper(this)
                 shared.clear()
+
                 Toast.makeText(this,"User LogOut Successfully.",Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
@@ -240,7 +243,7 @@ override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
 
 
-fun showName(){
+    fun showName(){
 
 
 }

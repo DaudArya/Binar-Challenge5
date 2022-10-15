@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.graphics.Color
 import android.graphics.ImageDecoder
 import android.net.Uri
 import android.os.Build
@@ -13,6 +14,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
@@ -26,6 +28,7 @@ import com.binarChallenge.mymovies.model.User
 import com.binarChallenge.mymovies.ui.MainActivity
 import com.binarChallenge.mymovies.utils.Constant
 import com.binarChallenge.mymovies.utils.SharedHelper
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_edit_profile.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -61,6 +64,7 @@ class EditProfileFragment : Fragment() {
 
             btnEditSave.setOnClickListener {
                 saveDataProfile()
+
             }
 
             btndelete.setOnClickListener {
@@ -177,6 +181,7 @@ class EditProfileFragment : Fragment() {
                             runBlocking(Dispatchers.Main) {
                                 when {
                                     res != 0 -> {
+//
                                         Toast.makeText(requireContext(), "Edit Profile Success", Toast.LENGTH_SHORT).show()
 //                                        findNavController().navigate(R.id.action_editProfileFragment_to_profileUserFragment)
                                         activity?.let {
@@ -193,6 +198,19 @@ class EditProfileFragment : Fragment() {
         }
     }
 
+    fun onSNACK(view: View){
+        //Snackbar(view)
+        val snackbar = Snackbar.make(view, "Edit Profile Success",
+            Snackbar.LENGTH_LONG).setAction("Action", null)
+        snackbar.setActionTextColor(Color.BLACK)
+        val snackbarView = snackbar.view
+        snackbarView.setBackgroundColor(Color.LTGRAY)
+        val textView =
+            snackbarView.findViewById(com.google.android.material.R.id.snackbar_text) as TextView
+        textView.setTextColor(Color.WHITE)
+        textView.textSize = 28f
+        snackbar.show()
+    }
     private fun deleteDataProfile() {
         binding.apply {
             userViewModel.user.observe(viewLifecycleOwner){

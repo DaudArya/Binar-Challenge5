@@ -1,6 +1,7 @@
 package com.binarChallenge.mymovies.fragments
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,9 @@ import com.binarChallenge.mymovies.model.DatabaseStore
 import com.binarChallenge.mymovies.ui.MainActivity
 import com.binarChallenge.mymovies.utils.Constant
 import com.binarChallenge.mymovies.utils.SharedHelper
+import com.google.android.material.snackbar.BaseTransientBottomBar
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -40,9 +44,8 @@ class LoginFragment : Fragment() {
         shared = SharedHelper(requireContext())
 
         binding.apply {
-            Registerw.setOnClickListener {
-                findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
-            }
+            snackbaropen()
+
 
             Login.setOnClickListener {
                 binding.apply {
@@ -84,6 +87,17 @@ class LoginFragment : Fragment() {
                 }
             }
         }
+    }
+
+    //SnackBar
+    private fun snackbaropen() {
+       Registerw.setOnClickListener{
+           findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+           Snackbar.make(it,"Please Enter Your Data", Snackbar.LENGTH_LONG)
+               .setAnimationMode(BaseTransientBottomBar.ANIMATION_MODE_SLIDE)
+               .setBackgroundTint(Color.parseColor("#000000"))
+               .show()
+       }
     }
 
     override fun onStart() {
