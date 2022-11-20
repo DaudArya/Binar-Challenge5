@@ -5,18 +5,18 @@ orbs:
   android: circleci/android@1.0
 jobs:
 
-  testing :
-     steps:
-      - checkout
-    #Lint Testing
-    - run:
-      name: Run Tests
-      command: ./gradlew lint test
-    - store_artifacts:
-      path: app/build/reports
-      destination: reports
-    - store_test_results:
-      path: app/build/test-results
+#  testing :
+#     steps:
+#      - checkout
+#    #Lint Testing
+#    - run:
+#      name: Run Tests
+#      command: ./gradlew lint test
+#    - store_artifacts:
+#      path: app/build/reports
+#      destination: reports
+#    - store_test_results:
+#      path: app/build/test-results
 
 
   build:
