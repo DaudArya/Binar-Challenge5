@@ -32,7 +32,10 @@ jobs:
           destination: apks/
 
       - run: ./gradlew lint
-      
+      - store_artifacts:
+          path: app/build/reports
+          destination: reports
+
       # run tests!
       - run: ./gradlew test
 
