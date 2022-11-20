@@ -80,6 +80,7 @@ class EditProfileFragment : Fragment() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -94,6 +95,7 @@ class EditProfileFragment : Fragment() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode==2 && resultCode == Activity.RESULT_OK && data !=null){
             selectedImage = data.data

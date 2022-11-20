@@ -30,6 +30,6 @@ class SharedHelper(context: Context) {
     fun clear() {
         val editor: SharedPreferences.Editor = sharedPref.edit()
         editor.clear()
-        editor.commit()
+        editor.apply()
     }
 }
