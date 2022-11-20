@@ -40,11 +40,12 @@ jobs:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
 
-      # Generate apk
+      # Generate apk format
       - run: ./gradlew assembleDebug
       - store_artifacts:
           path: app/build/outputs/apk/
           destination: apks/
+
 
       # run tests!
       - run: ./gradlew test
