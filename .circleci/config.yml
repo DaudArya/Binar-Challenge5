@@ -6,8 +6,6 @@ orbs:
 jobs:
 
   testing :
-    - working_directory: ~/code
-        
      steps:
       - checkout
     #Lint Testing
