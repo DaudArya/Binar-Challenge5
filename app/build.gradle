@@ -18,8 +18,6 @@ android {
         disable 'ObsoleteLintCustomCheck'
         disable 'TypographyFractions','TypographyQuotes'
         checkReleaseBuilds false
-
-
     }
 
     buildTypes {

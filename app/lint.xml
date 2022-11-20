@@ -2,10 +2,12 @@
 <lint>
      <!--karena scrollview yang digunakan untuk register fragment perlu dibuat match parent daripada wrap content agar pas ditengah-->
     <issue id="ScrollViewSize" severity="ignore"/>
+<!-- ada beberapa variable kode yang menggunakan bahasa indonesia sehingga masuk kedalam waring Hardcode-->
     <issue id="HardcodedText" severity="ignore"/>
     <issue id="RtlHardcoded" severity="ignore"/>
-    <!--karena snackbar sudah muncul dan toast tidak perlu dilakukan pengecekan karena tidak digunakan-->
-    <issue id="ShowToast" severity="ignore"/>
     <issue id="UnusedResources" severity="ignore"/>
+
+    <issue id="ShowToast" severity="ignore"/>
     <issue id="GradleDependency" severity="ignore"/>
+
 </lint>
