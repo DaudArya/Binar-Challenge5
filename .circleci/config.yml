@@ -31,6 +31,9 @@ jobs:
           path: app/build/outputs/apk/
           destination: apks/
 
-
+      - run: ./gradlew lint
+      
       # run tests!
       - run: ./gradlew test
+
+
